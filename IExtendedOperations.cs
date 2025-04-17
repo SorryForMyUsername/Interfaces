@@ -9,7 +9,7 @@ namespace _37_6
 {
     interface IExtendedOperations
     {
-        void Sqrt(int x);
-        void Pow(int x, int degree);
+        double Sqrt();
+        int Pow();
     }
 }

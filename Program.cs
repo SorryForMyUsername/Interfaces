@@ -10,7 +10,15 @@ namespace _37_6
     {
         static void Main(string[] args)
         {
+            A a = A.Input();
+            a.Sum();
+            a.Multiply();
+            Console.WriteLine();
 
+            Aa aa = Aa.Input();
+            aa.Sum();
+
+            Console.ReadKey(true);
         }
     }
 }

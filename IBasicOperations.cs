@@ -8,9 +8,9 @@ namespace _37_6
 {
     interface IBasicOperations
     {
-        int Sum(int x, int y);
-        int Sub(int x, int y);
-        int Multiply(int x, int multiplier);
-        int Divide(int x, int divider);
+        int Sum();
+        int Sub();
+        int Multiply();
+        int Divide();
     }
 }
