@@ -12,9 +12,41 @@ namespace _38_2
         string model;
         int speed;
 
-        public string Dop { get => dop; set => dop = value; }
-        public string Model { get => model; set => model = value; }
-        public int Speed { get => speed; set => speed = value; }
+        public string Dop
+        {
+            get { return dop; }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    dop = "Неизвестно";
+                }
+                dop = value;
+            }
+        }
+        public string Model
+        {
+            get { return model; }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    model = "Неизвестно";
+                }
+            }
+        }
+        public int Speed
+        {
+            get { return speed; }
+            set
+            {
+                if(value < 0)
+                {
+                    speed = Math.Abs(value);
+                }
+                speed = value;
+            }
+        }
 
         public Avto(string dop, string model, int speed)
         {
@@ -27,7 +59,9 @@ namespace _38_2
 
         public virtual void Show()
         {
-
+            Console.WriteLine($"Dop: {Dop}\n" +
+                $"Модель: {Model}\n" +
+                $"Скорость: {Speed}");
         }
     }
 }

@@ -8,19 +8,27 @@ namespace _38_2
 {
     class Maz : Avto, ITurbo
     {
+        public Maz(string dop, string model, int speed) : base(dop, model, speed) { }
+
         public override void Drive()
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"{Model}: Drive (Maz)");
+        }
+
+        public static Maz Input()
+        {
+            Console.Write("Dop: ");
+            string dop = Console.ReadLine();
+            Console.Write("Model: ");
+            string model = Console.ReadLine();
+            Console.Write("Speed: ");
+            int speed = int.Parse(Console.ReadLine());
+            return new Maz(dop, model, speed);
         }
 
         public void Turbo()
         {
-            throw new NotImplementedException();
-        }
-
-        public override void Show()
-        {
-            base.Show();
+            Console.WriteLine($"{Model}: Turbo (Maz)");
         }
     }
 }
